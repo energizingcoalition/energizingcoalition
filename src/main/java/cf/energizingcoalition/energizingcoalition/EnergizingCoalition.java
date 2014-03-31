@@ -9,18 +9,20 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid="EnergizingCoalition", name="Energizing Coalition", version="@VERSION@")
+@Mod(modid="EnergizingCoalition", name="Energizing Coalition", version="1.0.0")
 public class EnergizingCoalition
 {
     @Instance(value = "EnergizingCoalition")
     public static EnergizingCoalition instance;
    
-    @SidedProxy(clientSide="cf.energizingcoalition.proxy.ClientProxy", serverSide="cf.energizingcoalition.proxy.CommonProxy")
+    @SidedProxy(clientSide="cf.energizingcoalition.energizingcoalition.proxy.ClientProxy", serverSide="cf.energizingcoalition.energizingcoalition.proxy.CommonProxy")
     public static CommonProxy proxy;
    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	BlockHelper.initBlocks();
+    	
     }
    
     @EventHandler
