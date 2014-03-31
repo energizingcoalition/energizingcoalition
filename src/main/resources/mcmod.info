@@ -1,0 +1,16 @@
+[
+{
+  "modid": "EnergizingCoalition",
+  "name": "Energizing Coalition",
+  "description": "Future energy sources for minecraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://energizingcoalition.cf",
+  "updateUrl": "",
+  "authors": ["Chlorek","maciekmm"],
+  "credits": "Created by Energizing Coalition team",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
