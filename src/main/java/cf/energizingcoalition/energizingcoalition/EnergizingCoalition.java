@@ -1,5 +1,6 @@
 package cf.energizingcoalition.energizingcoalition;
 
+import cf.energizingcoalition.energizingcoalition.misc.FuelHandler;
 import cf.energizingcoalition.energizingcoalition.misc.Utils;
 import cf.energizingcoalition.energizingcoalition.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
@@ -9,6 +10,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.Configuration;
 
 @Mod(modid= Utils.MOD_ID, name=Utils.NAME, version=Utils.VERSION)
@@ -29,14 +31,15 @@ public class EnergizingCoalition
     {
         this.config = new Configuration(event.getSuggestedConfigurationFile());
         this.config.load();
-        this.blockHelper = new BlockHelper();
-    	this.blockHelper.initBlocks();
     }
    
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-    	proxy.registerRenderers();
+        proxy.registerRenderers();
+        this.blockHelper = new BlockHelper();
+        this.blockHelper.initBlocks();
+        GameRegistry.registerFuelHandler(new FuelHandler());
     }
    
     @EventHandler

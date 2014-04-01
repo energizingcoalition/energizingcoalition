@@ -1,5 +1,6 @@
 package cf.energizingcoalition.energizingcoalition.items;
 
+import cf.energizingcoalition.energizingcoalition.EnergizingCoalition;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
