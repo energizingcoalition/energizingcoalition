@@ -1,6 +1,5 @@
 package cf.energizingcoalition.energizingcoalition.blocks;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -11,9 +10,9 @@ import net.minecraft.world.World;
 
 public class BlockGas extends Block
 {
-	public BlockGas(Material material)
+	public BlockGas()
 	{
-		super(4000, material);
+		super(4000, Material.air);
 		this.setUnlocalizedName("blockGas");
 		this.setTextureName("energizingcoalition:gas");
 		this.setLightOpacity(1);
